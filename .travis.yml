@@ -7,4 +7,4 @@ before_install:
 	- docker build -t rtyx/docker-react-cv -f Dockerfile.dev .
 
 script:
-	- docker run -e CI=true rtyx/docker-react-cv npm run test -- --coverage
+	- docker run -it -e CI=true rtyx/docker-react-cv yarn test -coverage
